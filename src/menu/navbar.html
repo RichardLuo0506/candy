@@ -1,0 +1,3 @@
+<template class="navbar" bindable="router">
+    <div repeat.for="row of router.navigation" click.delegate="router.navigate(row.href)" class="navbar-tab ${row.isActive ? 'is-active' : ''}"><i class="material-icons">${row.config.materialIconName}</i></div>
+</template>

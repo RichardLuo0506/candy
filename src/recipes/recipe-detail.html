@@ -1,0 +1,24 @@
+<template>
+    <require from="./recipe-detail"></require>
+    <section class="recipe-detail-view">
+        <div class="recipe-ctrl">
+            <div class="ctrl-title">Recipe</div>
+            <div class="ctrl-spacer"></div>
+            <!-- <div class="ctrl-setting ctrl-btn ${displaySettings ? 'is-active' : ''}" click.delegate="displaySettings = !displaySettings"><i class="material-icons">tune</i></div> -->
+        </div>
+        <div class="back-btn" click.delegate="back()"><i class="material-icons">chevron_left</i>back</div>
+        <div class="recipe-name-heading">${recipe.title}</div>
+        <div class="recipe-image" css="background-image: url(${recipe.image})"></div>
+        <div class="recipe-section ingredients">
+            <div class="heading">Ingredients <span>${recipe.extendedIngredients.length}</span></div>
+            <div class="ingredient" repeat.for="ingredient of recipe.extendedIngredients">
+                <div class="ingredient-name">${ingredient.name}</div>
+                <div class="ingredient-amount">${ingredient.amount} ${ingredient.unitShort}</div>
+            </div>
+        </div>
+        <div class="recipe-section directions">
+            <div class="heading">Directions</div>
+            <div class="text">${recipe.instructions || 'none'}</div>
+        </div>
+    </section>
+</template>

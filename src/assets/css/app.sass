@@ -1,0 +1,100 @@
+@import kurisutiiina/kurisutiiina
+@import config
+@import auth/login
+@import auth/signup
+@import menu/navbar
+@import fridge/fridge
+@import search/search
+@import search/fg-suggest-search
+@import recipes/recipe-detail
+@import dashboard/dashboard
+@import plan/plan
+
+// @import search/fg-elastic-search
+
+body
+	+roboto
+
+	color: $text
+	font-size: $font-md
+	padding-bottom: $navbar-height
+	background-color: $bg
+
+.under-construction
+	@extend .flex-xy
+
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+	.card
+		@extend .flex-xy
+
+		@extend .card-2
+
+		padding: 20px
+		background-color: rgba(0, 0, 0, 0.7)
+
+		.icon
+			i
+				font-size: 24px
+				color: white
+
+		.text
+			letter-spacing: 2px
+			word-spacing: 4px
+			text-transform: uppercase
+			font-weight: 600
+			font-size: $font-sm
+			padding-left: 10px
+			color: white
+
+.under-construction-flat
+	@extend .flex-xy
+
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+	.card
+		@extend .flex-xy
+
+		padding: 20px
+
+		.icon
+			color: #888
+
+			i
+				font-size: 24px
+
+		.text
+			letter-spacing: 2px
+			word-spacing: 4px
+			text-transform: uppercase
+			font-weight: 600
+			font-size: $font-sm
+			padding-left: 10px
+			color: #888
+
+.mobile-msg
+	@extend .flex-xy
+
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba(0, 0, 0, 0.7)
+	z-index: 99999
+	padding: 15%
+	text-align: center
+	line-height: 1.6
+	color: white
+	font-size: 18px
+
+	+media-xs
+		display: none

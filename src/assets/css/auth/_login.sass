@@ -1,0 +1,26 @@
+.login-view
+	@extend .flex-xy
+
+	height: 100vh
+	flex-direction: column
+
+	.login-form
+		width: 62%
+
+	.login-input
+		+fg-input
+
+		width: 100%
+		margin-bottom: 10px
+
+	.login-btn
+		+fg-btn((background-color: $primary, color: white))
+
+		border: none
+		width: 100%
+
+	.signup-btn
+		+fg-btn((background-color: $md-blue, color: white))
+
+		margin-top: 10px
+		width: 62%

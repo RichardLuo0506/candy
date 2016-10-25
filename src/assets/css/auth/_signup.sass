@@ -1,0 +1,29 @@
+.signup-view
+	@extend .flex-xy
+
+	height: 100vh
+	flex-direction: column
+
+	.signup-form
+		width: 62%
+
+	.signup-input
+		+fg-input
+
+		width: 100%
+		margin-bottom: 10px
+
+	.signup-btn
+		+fg-btn((background-color: $primary, color: white))
+
+		border: none
+		width: 100%
+
+	.back-btn
+		+fg-btn((background-color: $md-blue, color: white))
+
+		width: 62%
+		margin-top: 10px
+
+		i
+			margin-right: 10px

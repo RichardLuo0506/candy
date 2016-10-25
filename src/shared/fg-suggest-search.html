@@ -1,0 +1,11 @@
+<template>
+    <div class="fg-suggest-search">
+        <div class="search-group">
+            <input class="search-input" id="search-input" type="search" value.bind="searchTerm & debounce:150" keydown.delegate="inputHandler($event)" focus.bind="searchFocus" placeholder="${placeholder}" autocomplete='off'>
+            <div class="search-btn" click.delegate="searchRecipes()"><i class="material-icons">search</i></div>
+        </div>
+        <div class="suggestions-list" show.bind="displaySuggestions">
+        	<div class="suggestion-item" repeat.for="suggestion of suggestions" class.bind="$index === selectedSuggestion ? 'selected' : ''">${suggestion.title}</div>
+        </div>
+    </div>
+</template>

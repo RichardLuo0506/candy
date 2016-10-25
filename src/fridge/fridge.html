@@ -1,0 +1,38 @@
+<template>
+    <!-- <require from="../shared/fg-tags-search"></require>
+            <form class="search-form">
+            <fg-tags-search></fg-tags-search>
+        </form> -->
+    <section class="fridge-view">
+        <div class="fridge-ctrl">
+            <div class="ctrl-title">Fridge</div>
+            <div class="ctrl-spacer"></div>
+            <div class="ctrl-setting ctrl-btn"><i class="material-icons">tune</i></div>
+        </div>
+        <ul class="fridge-items">
+            <li class="special-fridge-item">
+                <div class="name">Apple<span class="mult"><i class="material-icons">clear</i></span><span class="quantity">7</span></div>
+                <div class="calorie"><span class="value">135 </span><span class="unit">Cal</span></div>
+            </li>
+            <li class="fridge-item" repeat.for="item of fridge">
+                <div class="item-icon" css="background-image: url(${item.thumbnail})"></div>
+                <div class="item-details">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-expiry">
+                        <span class="label">Expires: </span>
+                        <span class="text">${item.expiration}</span>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    ${item.quantity}
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div class="under-construction float">
+        <div class="card">
+            <div class="icon"><i class="mega-octicon octicon-tools"></i></div>
+            <div class="text">under construction</div>
+        </div>
+    </div>
+</template>

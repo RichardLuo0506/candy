@@ -1,0 +1,13 @@
+<template>
+    <require from="assets/css/app.css"></require>
+    <div class="login-view">
+    	<div style="text-align: center">Please switch to mobile view</div>
+        <br>
+        <form class="login-form">
+            <input class="login-input" type="text" value.bind="email" placeholder="Email">
+            <input class="login-input" type="password" value.bind="password" placeholder="Password">
+            <button class="login-btn" type="submit" click.delegate="login()">Login</button>
+        </form>
+        <div class="signup-btn" click.delegate="signup()">Signup</div>
+    </div>
+</template>

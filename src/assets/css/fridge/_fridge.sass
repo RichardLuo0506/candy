@@ -1,0 +1,114 @@
+.fridge-view
+	padding-top: $view-ctrl-height
+
+	.fridge-ctrl
+		@extend .card-1
+
+		display: flex
+		align-items: center
+		height: $view-ctrl-height
+		background-color: white
+		padding: 0 $padding
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		z-index: 100
+
+		.ctrl-title
+			font-size: $font-xl
+			font-weight: 600
+			color: $nav-icon-active
+			margin-right: $padding
+
+		.ctrl-spacer
+			flex: 1
+
+		.ctrl-btn
+			color: $nav-icon
+
+			i
+				font-size: $font-xl
+
+			&.setting
+
+	.fridge-items
+
+	.fridge-item
+		display: flex
+		background-color: white
+		border-bottom: 1px solid $divider
+		height: 60px
+
+		.item-icon
+			flex: 0 0 70px
+			height: 100%
+			border-top: 10px solid transparent
+			border-right: $padding solid transparent
+			border-bottom: 10px solid transparent
+			border-left: $padding solid transparent
+			background-size: contain
+			background-position: center center
+			background-repeat: no-repeat
+
+		.item-details
+			display: flex
+			flex: 1
+			flex-direction: column
+			padding: 10px 0
+			justify-content: space-around
+
+		.item-name
+			font-weight: 500
+
+		.item-expiry
+			font-size: $font-sm
+
+			.label
+				color: $subtext
+
+			.text
+				color: $primary
+
+		.item-quantity
+			flex: 0 0 60px
+			height: 100%
+			font-size: $font-xl
+			color: $primary
+			line-height: 60px
+			padding: 0 $padding
+			text-align: right
+
+	//dummy fridge item
+	.special-fridge-item
+		display: flex
+		height: 200px
+		border-bottom: 1px solid $divider
+		background-color: white !important
+		background: url(src/assets/img/apple.png) right center no-repeat
+		background-size: 50%
+		justify-content: center
+		flex-direction: column
+		padding-left: $padding
+
+		.name
+			font-size: $font-xxl
+
+			.mult i
+				color: $wine
+				font-size: $font-lg
+				padding: 3px
+				font-weight: 600
+
+			.quantity
+				color: $primary
+
+		.calorie
+			margin-top: 10px
+
+			.value
+				color: $primary
+				font-size: $font-lg
+
+			.unit
+				color: $subtext

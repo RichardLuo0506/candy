@@ -1,0 +1,25 @@
+.navbar
+	border-top: 1px solid $divider
+	height: $navbar-height
+	display: flex
+	position: fixed
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 100
+	background-color: white
+
+	.navbar-tab
+		@extend .flex-xy
+
+		flex: 1
+		color: $nav-icon
+
+		i
+			font-size: $font-xl
+
+		&.is-active
+			color: $nav-icon-active
+
+			i
+				font-size: $font-xl

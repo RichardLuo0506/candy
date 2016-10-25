@@ -1,0 +1,12 @@
+<template>
+    <require from="assets/css/app.css"></require>
+    <div class="signup-view">
+        <form class="signup-form">
+            <input class="signup-input" type="text" value.bind="email" placeholder="Email">
+            <input class="signup-input" type="password" value.bind="password" placeholder="Password">
+            <input class="signup-input" type="password" value.bind="passwordConfirm" placeholder="Password Confirm">
+            <button class="signup-btn" type="submit" click.delegate="signup()">Signup</button>
+        </form>
+        <div class="back-btn" click.delegate="backToLogin()"><i class="ionicons ion-ios-arrow-back"></i>Back to Login</div>
+    </div>
+</template>

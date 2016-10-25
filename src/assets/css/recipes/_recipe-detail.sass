@@ -1,0 +1,102 @@
+.recipe-detail-view
+	padding-top: $view-ctrl-height
+	position: relative
+
+	.recipe-ctrl
+		@extend .card-1
+
+		display: flex
+		align-items: center
+		height: $view-ctrl-height
+		background-color: white
+		padding: 0 $padding
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		z-index: 100
+
+		.ctrl-title
+			font-size: $font-xl
+			font-weight: 600
+			color: $nav-icon-active
+			margin-right: $padding
+
+		.ctrl-spacer
+			flex: 1
+
+		.ctrl-btn
+			color: $nav-icon
+
+			i
+				font-size: $font-xl
+
+			&.ctrl-setting
+				&.is-active i
+					color: $primary
+
+	.back-btn
+		letter-spacing: 1px
+		word-spacing: 2px
+		text-transform: uppercase
+		font-weight: 600
+		font-size: $font-sm
+		color: $subtext
+		padding-bottom: 10px
+		padding: $padding $padding 0 ($padding - 5px)
+
+		i
+			vertical-align: middle
+
+	.recipe-name-heading
+		+lato
+
+		font-size: $font-xxl
+		font-weight: 600
+		color: $text
+		padding: $padding
+		margin-bottom: 10px
+
+	.recipe-image
+		margin: 0 auto 25px auto
+		width: 150px
+		height: 150px
+		border-radius: 100%
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+
+	.recipe-section
+		padding: 0 $padding
+		margin-bottom: 30px
+
+		.text
+			line-height: 20px
+			padding: 0 5px
+
+		.heading
+			+openSans
+
+			letter-spacing: 1px
+			word-spacing: 2px
+			text-transform: uppercase
+			font-weight: 600
+			font-size: $font-md
+			color: $primary
+			padding-bottom: 10px
+			border-bottom: 1px solid $divider
+			margin-bottom: 10px
+
+			span
+				color: $subtext
+
+	.ingredient
+		display: flex
+		line-height: 24px
+		padding: 0 5px
+
+	.ingredient-name
+		flex: 2
+
+	.ingredient-amount
+		flex: 1

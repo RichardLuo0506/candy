@@ -1,0 +1,71 @@
+<template>
+    <require from="../shared/fg-suggest-search"></require>
+    <section class="search-view">
+        <div class="search-ctrl">
+            <div class="ctrl-title">Search</div>
+            <div class="ctrl-spacer"></div>
+            <div class="ctrl-setting ctrl-btn ${displaySettings ? 'is-active' : ''}" click.delegate="displaySettings = !displaySettings"><i class="material-icons">tune</i></div>
+        </div>
+        <form class="search-form">
+            <fg-suggest-search></fg-suggest-search>
+        </form>
+        <div class="filter-row" show.bind="filters.intolerances.length">
+            <div class="label">allergies:</div>
+            <div class="filter-item" repeat.for="item of filters.intolerances" css="background-image: url(${item.thumbnail})"></div>
+        </div>
+        <div class="filter-row" show.bind="filters.cuisine.length">
+            <div class="label">cuisine:</div>
+            <div class="filter-item" repeat.for="item of filters.cuisine" css="background-image: url(${item.thumbnail})"></div>
+        </div>
+        <div show.bind="results.length">
+            <div class="result-label">found recipes</div>
+            <ul class="search-results">
+                <li class="result-item" repeat.for="item of results" click.delegate="viewRecipe(item)">
+                    <div class="item-icon" css="background-image: url(${baseUri}${item.image})"></div>
+                    <div class="item-details">
+                        <div class="item-name">${item.title}</div>
+                    </div>
+                    <div class="item-preptime">
+                        ${item.readyInMinutes}<span>min</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="settings" show.bind="displaySettings">
+            <div class="filter-group">
+                <div class="group-label">allergies</div>
+                <div class="allergens-container">
+                    <div class="allergen ${allergen.active ? 'is-active' : ''}" repeat.for="allergen of intolerances" css="background-image: url(${allergen.thumbnail})" click.delegate="toggleIntolerance(allergen)"></div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="group-label">cuisine type</div>
+                <div class="countries-container">
+                    <div class="country ${country.active ? 'is-active' : ''}" repeat.for="country of countries" css="background-image: url(${country.thumbnail})" click.delegate="toggleCountry(country)"></div>
+                </div>
+            </div>            
+            <div class="separator"></div>
+            <div class="list-container">
+                <div class="list-label">todo</div>
+                <ul>
+                    <li>Add styling for tablets/monitors</li>
+                    <li>Add transition animations and visual cues</li>
+                    <li>Add cascade/unfold animations</li>
+                    <li>Use route-level resolve</li>
+                    <li>Move api keys out of client-side code and github</li>
+                    <li>Reorganize project with webpack</li>
+                    <li>Integrate OAuth 2</li>
+                    <li>Save preferences in db</li>
+                    <li>Persist session states</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <div class="list-label">issues</div>
+                <ul>
+                    <li>150ms debounce on search is too short for mobile. Enter key conflicts with debounce timing.</li>
+                    <li>Selecting more cuisine filters exclude more results.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</template>

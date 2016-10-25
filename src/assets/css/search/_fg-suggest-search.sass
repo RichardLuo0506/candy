@@ -1,0 +1,39 @@
+.fg-suggest-search
+	color: $text
+	position: relative
+
+	.search-group
+		@extend .card-1
+
+		background-color: white
+		width: 100%
+		display: flex
+		align-items: center
+		padding: 5px 8px
+
+	.search-input
+		flex: 1
+		border: none
+		padding-right: 5px
+
+	.search-btn
+		@extend .flex-xy
+
+		i
+			color: $subtext
+
+	.suggestions-list
+		@extend .card-1
+
+		position: absolute
+		background-color: white
+		top: 34px
+		right: 0
+		left: 0
+		padding: 5px 0
+
+	.suggestion-item
+		padding: 5px 8px
+
+		&:hover, &.selected
+			background-color: $primary

@@ -1,0 +1,11 @@
+<template>
+    <div class="fg-elastic-search">
+        <div class="label">${label}</div>
+        <div class="search-group" css.bind="{paddingTop: searchGroupPaddingTop + 'px'}">
+            <label class="search-icon" for="search-input"><i class="material-icons">search</i></label>
+            <input class="search-input" id="search-input" type="search" css.bind="{width: width + 'px'}" value.bind="searchTerm">
+            <div class="spacer"></div>
+        </div>
+        <div class="search-width" css.bind="{maxWidth: maxWidth}">${searchTerm}</div>
+    </div>
+</template>
